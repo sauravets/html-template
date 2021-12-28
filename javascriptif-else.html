@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h1>Learn Javascript</h1>
+    <h3>Javascript for If-else Statement</h3>
+    <p id="demo"></p>
+    <script>
+        const hour = new Date().getHours();
+        let greeting;
+        if (hour < 18) {
+            greeting = "good day";
+        }
+        else {
+            greeting = "good evening";
+        }
+        document.getElementById("demo").innerHTML = greeting;
+    </script>
+
+    <!-- If-else else-if statement -->
+    <h2>If-else else-if</h2>
+    <script>
+        var per = 80;
+        if (per >= 80 && per < 100) {
+            document.write("you are in merit");
+        }
+        else if (per >= 60 && per < 80) {
+            document.write("you are in first division");
+        }
+        else if (per >= 45 && per < 60) {
+            document.write("you are in second division");
+        }
+
+        else if (per >= 33 && per < 45) {
+            document.write("you are in third division");
+        }
+        else {
+            document.write("you are fail");
+        }
+
+    </script>
+
+    <!-- Switch statement -->
+    <h3>Switch statement</h3>
+    <p id="demo1"></p>
+    <script>
+        let day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "tuesday";
+                break;
+            case 3:
+                day = "wednesday";
+                break;
+            case 4:
+                day = "thrusday";
+                break;
+            case 5:
+                day = "friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+        }
+        document.getElementById("demo1").innerHTML = " Today is " + day;
+
+    </script>
+
+    <!-- Create Events -->
+    <h3>Create a onclick function</h3>
+    <p>click the button to trigger a function</p>
+    <button onclick="newFunction()">Click Me</button>
+    <p id="demo3"></p>
+
+    <script>
+        function newFunction() {
+            document.getElementById("demo3").innerHTML = "hello world";
+        }
+    </script>
+    
+    <!-- onselect event -->
+    <h3>On select event</h3>
+    Text:<input type="text" value="hello world" onselect="myFunction()">
+    <p id="demo4"></p>
+    <script>
+        function myFunction(){
+            document.getElementById("demo4").innerHTML="Here's the new text";
+        }
+    </script>
+
+    <!-- Array Sorting -->
+    <h3>Sorting an array</h3>
+    <p id="demosort"></p>
+    <p id="demosort1"></p>
+    <script>
+    let fruits=["banana","apple","orange","mango"];
+    document.getElementById("demosort").innerHTML=fruits;
+
+    fruits.sort();
+    document.getElementById("demosort1").innerHTML=fruits;
+</script>
+
+   <!--Array Reverse Sorting-->
+   <h3>Reverse Sorting</h3>
+    <p id="reverse"></p>
+    <p id="reverse1"></p>
+    <script>
+        let fruitss=["Banana","Orange","Apple","Mango"];
+        document.getElementById("reverse").innerHTML=fruitss;
+
+        // first sorting//
+        fruitss.sort();
+
+        // then apply reverse sorting//
+        fruitss.reverse();
+        document.getElementById("reverse1").innerHTML=fruitss;
+    </script>
+</body>
+
+</html>

@@ -128,6 +128,131 @@
         fruitss.reverse();
         document.getElementById("reverse1").innerHTML=fruitss;
     </script>
+
+    <!-- String -->
+    <h3>String</h3>
+    <p id="demostr"></p>
+    <script>
+        let text="john doe";
+        document.getElementById("demostr").innerHTML=text;
+    </script>
+
+    <!-- String methods string length -->
+    <h3>String Methods</h3>
+    <p>String length property returns the length of a string.</p>
+    <p id="strlen"></p>
+    <script>
+    let text1="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    document.getElementById("strlen").innerHTML=text1.length;
+    </script>
+
+    <!--stting slice-->
+    <h3>String Methods Slice</h3>
+    <p>The slice() method extract a part of a string
+        and returns the extracted parts in a new string:</p>
+    <p id="strslice"></p>
+    <script>
+    let str="Apple,mango,banana";
+    document.getElementById("strslice").innerHTML=str.slice(7,13);
+    </script>
+
+    <!-- string substring -->
+    <h3>String Methods Substring</h3>
+    <p>The substring() method extract a part of a string and returns 
+        the extracted parts in a new string:</p>
+    <p id="strsub"></p>
+    <script>
+    let str1="Apple,mango,banana";
+    document.getElementById("strsub").innerHTML=str1.substring(7,13);
+    </script>
+
+    <!-- string str -->
+    <h3>String Methods Substr</h3>
+    <p>The substr() method extract a part of a string
+    and returns the extracted parts in a new string:</p>
+    <p id="strsubstr"></p>
+    <script>
+    let str2="Apple,mango,banana";
+    document.getElementById("strsubstr").innerHTML=str2.substr(7,13);
+    </script>
+
+    <!-- string replace -->
+    <h3>String methods replace</h3>
+    <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+    <button onclick="nyFunction()">Try It</button>
+    <p id="replacedemo">Plaese visit Microsoft!</p>
+    <script>
+        function nyFunction(){
+            let textr=document.getElementById("replacedemo").innerHTML;
+            document.getElementById("replacedemo").innerHTML=textr.replace("Microsoft","W3school");
+        }
+    </script>
+
+    <!-- string concat -->
+    <h3>String method concat</h3>
+    <p>The concat() method joins two or more strings:</p>
+    <p id="conco"></p>
+    <script>
+        let texts1="hello";
+        let texts2="world";
+        let texts3=texts1.concat(" ",texts2);
+        document.getElementById("conco").innerHTML=texts3;
+    </script>
+
+    <!-- string trim -->
+    <h3>String method trim</h3>
+    <p id="trim"></p>
+    <script>
+        let tes1="       hello world      ";
+        let tes2=tes1.trim();
+        document.getElementById("trim").innerHTML="length text1="+tes1.length+
+        "<br> length text2="+tes2.length;
+    </script>
+
+    <!-- Array push method -->
+    <h3>Array push method</h3>
+    <p>The push() method returns the new array length:</p>
+    <p id="dpush"></p>
+    <p id="dpush1"></p>
+    <script>
+        const fruit=["Apple","Mango","Orange","Banana"];
+        document.getElementById("dpush").innerHTML=fruit.push("kiwi");
+        document.getElementById("dpush1").innerHTML=fruit;
+    </script>
+
+    <!-- Array forEach method -->
+    <h3>Array forEach method</h3>
+    <p>Calls a function once for each array element.</p>
+    <p id="each"></p>
+    <script>
+        const numbers=[45,4,9,16,25];
+        let txt=" ";
+        numbers.forEach(myFunction);
+        document.getElementById("each").innerHTML=txt;
+
+        function myFunction(value,index,array){
+            txt +=value + "<br>";
+
+        }
+
+    </script>
+    <!-- javascript Array.map -->
+
+    <h3>Javascript Array.map</h3>
+    <p>Creates a new array by performing a function on each array element.</p>
+    <p id="map"></p>
+    <script>
+        const numbers1=[45,4,9,16,25];
+        const numbers2=numbers1.map(myFunction);
+
+        document.getElementById("map").innerHTML=numbers2;
+
+        function myFunction(value,index,array){
+            return value*2;
+
+        }
+    </script>
+
 </body>
 
 </html>

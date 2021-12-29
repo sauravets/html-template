@@ -253,6 +253,19 @@
         }
     </script>
 
+    <!-- array filter -->
+    <h3>Array.filter()</h3>
+    <p>Creates a new array with all array elements that passes a test.</p>
+    <p id="filter"></p>
+    <script>
+        const number=[45,4,9,16,25];
+        const over18=number.filter(myFunction);
+        document.getElementById("filter").innerHTML=over18;
+        function myFunction(value,index,array){
+            return value>18;
+        }
+    </script>
+
 </body>
 
 </html>
